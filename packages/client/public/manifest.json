@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "FullTime Force - Show git commits",
+  "name": "Simple PWA to show git commits",
   "icons": [
     {
       "src": "favicon.ico",
