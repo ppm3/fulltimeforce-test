@@ -7,6 +7,7 @@ describe('getConfig', () => {
     process.env.GITHUB_API_BASE_URL = 'http://test.com';
     process.env.GITHUB_URL_SEGMENT_REPOS = '/foo';
     process.env.GITHUB_URL_SEGMENT_COMMITS = '/bar';
+    process.env.GITHUB_API_VERSION = '2022-11-28';
 
     const expectedConfig = {
       service: {
@@ -17,6 +18,7 @@ describe('getConfig', () => {
         baseUrl: 'http://test.com',
         reposSegment: '/foo',
         commitSegment: '/bar',
+        version: "2022-11-28",
       },
     };
 
@@ -31,6 +33,7 @@ describe('getConfig', () => {
     delete process.env.GITHUB_API_BASE_URL;
     delete process.env.GITHUB_URL_SEGMENT_REPOS;
     delete process.env.GITHUB_URL_SEGMENT_COMMITS;
+    delete process.env.GITHUB_API_VERSION;
 
     const expectedConfig = {
       service: {
@@ -41,6 +44,7 @@ describe('getConfig', () => {
         baseUrl: '',
         reposSegment: '',
         commitSegment: '',
+        version: '',
       },
     };
 
@@ -48,4 +52,9 @@ describe('getConfig', () => {
 
     expect(config).toEqual(expectedConfig);
   });
+
+  beforeEach(() => {
+    jest.clearAllMocks()
+  })
+  
 });

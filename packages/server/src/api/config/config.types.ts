@@ -2,6 +2,7 @@ export interface GithubParams {
   baseUrl: string
   reposSegment: string
   commitSegment: string
+  version: string
 }
 
 export interface ServiceParams {
