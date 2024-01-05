@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "1a992714-d876-405d-bd54-cb1ced079e14",
+		"name": "FullTimeForce - API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "194476"
+	},
+	"item": [
+		{
+			"name": "Ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/ping",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HealthCheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/healthcheck",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"healthcheck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Api - Commits",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/{{v}}/api/commits/ppm3/fulltimeforce-test",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"{{v}}",
+						"api",
+						"commits",
+						"ppm3",
+						"fulltimeforce-test"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,29 @@
+name: Test Server API Coverage
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run tests with coverage
+      run: npm run test -- --coverage
+    - name: Validate coverage
+      run: |
+        COVERAGE_THRESHOLD=90
+        ACTUAL_COVERAGE=$(cat coverage/coverage-summary.json | jq -r '.total.lines.pct')
+        if (( $(echo "$ACTUAL_COVERAGE < $COVERAGE_THRESHOLD" | bc -l) )); then
+          echo "Coverage is less than $COVERAGE_THRESHOLD%. Blocking the merge."
+          exit 1
+        fi

@@ -12,6 +12,15 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "build"]
+  "include": [
+    "src/**/*.ts",
+    "__tests__/*.ts"
+  ],
+  "parserOptions": {
+    "project": [
+      "./.eslintrc.js",
+      "*.ts"
+    ]
+  },
+  "exclude": ["node_modules", "./build", "__tests__", "jest.config.ts", "tsconfig.eslint.json", ".eslintrc.js"]
 }
