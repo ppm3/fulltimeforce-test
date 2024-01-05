@@ -1,6 +1,7 @@
-# Project Name
+# Full Time Force - Test
 
-A brief description of your project.
+This repository is a monorepo containing both the server and client applications for FullTimeForce project. It's structured to facilitate the development, testing, and deployment of both parts of the project in a cohesive manner.
+
 
 ## Table of Contents
 
@@ -8,31 +9,53 @@ A brief description of your project.
 - [Getting Started](#getting-started)
 - [Client](#client)
 - [Server](#server)
-- [Contributing](#contributing)
+- [Quick Start](#quick-start)
 - [License](#license)
 
 ## Project Structure
 
-Describe the structure of your mono-repo here. Explain the purpose of the client and server directories, and any other relevant directories or files.
+The monorepo is organized into the following main directories:
+
+- `packages/`
+  - `server/`: The backend application.
+  - `client/`: The frontend application.
 
 ## Getting Started
 
-Provide instructions on how to get the project up and running. Include any prerequisites, installation steps, and configuration instructions.
+Before you begin, ensure you have the following installed:
+- Node.js (preferably the latest stable version)
+- Yarn (as the package manager)
+- Git (for cloning the repository)
+
 
 ## Client
 
-Provide information about the client-side of the project. Include details about the technologies used, how to run the client, and any other relevant information.
+1. Navigate to the client directory: `cd packages/client`
+
+2. Follow the instructions in [README.MD](packages/client/README.md)
 
 ## Server
 
-Provide information about the server-side of the project. Include details about the technologies used, how to run the server, and any other relevant information.
+1. Navigate to the server directory: `cd packages/server`
 
-## Contributing
+2. Follow the instructions in [README.MD](packages/server/README.md)
 
-Explain how others can contribute to your project. Include guidelines for submitting pull requests, reporting issues, and any other relevant information.
+
+## Quick Start
+
+After adding the values of the environment variables, you can run these commands from the root of the mono-repo:
+
+```bash
+yarn run start:server
+
+yarn run start:client
+```
 
 ## License
 
 Specify the license under which your project is released. For example:
 
 This project is licensed under the [MIT License](LICENSE).
+
+
+Power by :battery: [PPM3](https://github.com/ppm3)
