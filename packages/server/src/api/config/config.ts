@@ -12,7 +12,8 @@ export function getConfig (): ConfigParams {
     githubApi: {
       baseUrl: process.env.GITHUB_API_BASE_URL ?? '',
       reposSegment: process.env.GITHUB_URL_SEGMENT_REPOS ?? '',
-      commitSegment: process.env.GITHUB_URL_SEGMENT_COMMITS ?? ''
+      commitSegment: process.env.GITHUB_URL_SEGMENT_COMMITS ?? '',
+      version: process.env.GITHUB_API_VERSION ?? ''
     }
   }
 }

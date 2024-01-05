@@ -14,7 +14,7 @@ function CommitsTable() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch(`${getGitCommitEndpoints()}?per_page=10&page=1`)
+    fetch(`${getGitCommitEndpoints()}?per_page=50&page=1`)
       .then(response => response.json())
       .then(data => setCommits(data))
       .catch(error => setError('Error fetching data. Please wait or refresh the page.'));
